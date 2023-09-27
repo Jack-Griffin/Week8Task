@@ -89,4 +89,9 @@ public class PlayerBMove : MonoBehaviour
         transform.Translate(Vector3.forward * velocity * Time.deltaTime, Space.Self);
         transform.Rotate(Vector3.up * angularVelocity * Time.deltaTime, Space.Self);
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        ScoreKeeper.Instance.scoreIncreaseB();
+    }
 }

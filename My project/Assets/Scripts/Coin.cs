@@ -20,8 +20,7 @@ public class Coin : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collider)
-    {
-        Debug.Log("Hehe");
+    { 
         Destroy(gameObject);
     }
 }
