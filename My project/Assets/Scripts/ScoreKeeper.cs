@@ -55,6 +55,7 @@ public class ScoreKeeper : MonoBehaviour
     public void scoreIncreaseA()
     {
         scoreA += pointsPerPickup;
+        Debug.Log(scoreA);
     }
 
     public void scoreIncreaseB()
