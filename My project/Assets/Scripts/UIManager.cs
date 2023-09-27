@@ -22,7 +22,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text ScoreAText;
     [SerializeField] private TMP_Text ScoreBText;
-    [SerializeField] private string scoreFormat = "Score: {0}";
+    [SerializeField] private string playerAScoreFormat = "Player A Score: {0}";
+    [SerializeField] private string playerBScoreFormat = "Player B Score: {0}";
     private int scoreA;
     private int scoreB;
 
@@ -48,7 +49,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreAText.text = string.Format(scoreFormat, ScoreKeeper.Instance.ScoreA);
-        ScoreBText.text = string.Format(scoreFormat, ScoreKeeper.Instance.ScoreB);
+        ScoreAText.text = string.Format(playerAScoreFormat, ScoreKeeper.Instance.ScoreA);
+        ScoreBText.text = string.Format(playerBScoreFormat, ScoreKeeper.Instance.ScoreB);
     }
 }
